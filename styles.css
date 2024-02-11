@@ -2,3 +2,51 @@ header{
     border: 1px solid tomato;
     text-align: center;
 }
+body{
+    background-color: black;
+    color: white;
+}
+#composing{
+    border: 1px solid black;
+    width: 10em;
+    text-align: center;
+}
+#composing:hover{
+    background-color: #9ca3af;
+}
+main{
+    width: 80%;
+    margin: auto;
+    margin-top: 3em;
+    border: 1px solid green;
+    text-align: center;
+
+}
+nav{
+    display: grid;
+    justify-content: center;
+}
+nav div{
+    margin-bottom: 3em;
+    display: flex;
+    flex-wrap: wrap;
+    width: 17em;
+    height: 9em;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid #FFFFFF75;
+    border: 2px solid #FFFFFF75;
+    box-shadow: 5px 5px 12px #00000035;
+    background: #FFFFFF25;
+    border-radius: 15px;
+    overflow: hidden;
+    backdrop-filter: blur(4px);
+
+}
+nav div:hover{
+    background-color: #ffffff47;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
