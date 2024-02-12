@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,21 +8,78 @@
     <script>
         function toggleCard(card) {
             card.classList.toggle('clicked');
+            document.getElementById('mensaje').style.display = card.classList.contains('clicked') ? 'none' : 'block';
+            document.getElementById('mensaje2').style.display = card.classList.contains('clicked') ? 'none' : 'block';
+            document.getElementById('mensajeRefactorizado').style.display = card.classList.contains('clicked') ? 'block' : 'none';
+            document.getElementById('mensajeRefactorizado2').style.display = card.classList.contains('clicked') ? 'block' : 'none';
         }
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('mensajeRefactorizado').style.display = 'none';
+            document.getElementById('mensajeRefactorizado2').style.display = 'none';
+        });
     </script>
     <title>Composing Methods</title>
 </head>
+
 <body>
-    <div class="card" onclick="toggleCard(this)">
-        <div class="card-inner">
-            
-                <figure class="card-front">
-                    <img src="./imagenesRefactor/otraMasGrande.png" alt="">
-                </figure>
-                <figure class="card-back">
-                    <img src="./imagenesRefactor/otraMasGrande.png" alt="">
-                </figure>
-        </div>
-    </div>
+    <header>
+        <h1>Extract Method</h1>
+    </header>
+    <main>
+        <article>
+            <section id="codigo">
+                <p>Pulsa sobre el código para refactorizarlo</p>
+                <div class="card" onclick="toggleCard(this)">
+                    <div class="card-inner">
+                        <p id="mensaje">Código sin refactorizar</p>
+                        <p id="mensajeRefactorizado">Código refactorizado</p>
+                        <figure class="card-front" id="mensaje">
+                            <img src="./imagenesCodeSmell/extractMethodSmell1.png" alt="extract method smell" width= "700px" height="500px">
+                        </figure>
+                        <figure class="card-back" id="mensajeRefactorizado">
+                            <img src="./imagenesRefactor/extractMethodRefactor1.png" alt="extract method refactor" width="700px" height="500px">
+                        </figure>
+                    </div>
+                </div>
+            </section>
+
+            <section id="descripcion">
+                <p>En este código podemos observar que tenemos dos arrays de enteros y tenemos que que ordenarlos de
+                    menor a
+                    mayor. Claramente para ordenar cada uno de ellos tenemos que hacer dos bucles iguales para cada uno
+                    de
+                    ellos, lo que provoca que tengamos código repetido. Es aquí donde entra en juego la técnica de
+                    <span>Extract Method. </span> Este método consiste en recoger ese código que está repetido y crear
+                    un
+                    método donde alojar ese código. De esta manera, al pasarle por parámetro
+                    en este caso el array, solo tendremos que hacer desde el main la llamada al método. Gracias a esta
+                    técnica ahorraremos tiempo y conseguiremos tener un código mucho más limpio y óptimo.
+                </p>
+            </section>
+        </article>
+        <article>
+            <header>
+                <h1>Extract Variable</h1>
+            </header>
+            <section id="codigo segundoSection" >
+                <div class=" card variable" onclick="toggleCard(this)">
+                    <div class="card-inner" >
+                        <p id="mensaje2">Código sin refactorizar</p>
+                        <p id="mensajeRefactorizado2">Código refactorizado</p>
+                        <figure class="card-front" id="mensaje">
+                            <img src="./imagenesCodeSmell/extractVariableSmell.png" alt="extract method smell" width="600px" height="200px">
+                        </figure>
+                        <figure class=" card-back" id="mensajeRefactorizado2">
+                            <img src="./imagenesRefactor/extractVariableRefactor.png" alt="extract method refactor" width="600px" height="200px">
+                        </figure>
+                    </div>
+                </div>
+            </section>
+            <section id="descripcion">
+                <p>En este código nos damos ceunta de que tenemos una operación que es importante para nosotros pero a su vez es muy extensa. Podemos acortar esta operación agrupandola en una variable que nos permita llamar a todos los elementos de la operación de forma más rapida. Ahora podremos usar la suma de todos los valores que queramos poniendo una palabra.</p>
+            </section>
+        </article>
+    </main>
 </body>
+
 </html>

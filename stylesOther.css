@@ -1,8 +1,34 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  background-color: #d0cdc9;
+  font-family: Arial, Helvetica, sans-serif;
+}
+span{
+  font-style: italic;
+}
+header{
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  margin-top: 1em;
+  color:#4c5b6c;
+}
+main{
+  width: 100%;
+  margin: auto;
+  display: grid;
+  justify-content: center;
+  margin-top: 1em;
+}
+/*Primera tarjeta*/
 .card {
     width: 600px;
-    height: 500px;
+    height: 600px;
     perspective: 1000px;
     cursor: pointer;
+    margin: auto;
   }
 
   .card-inner {
@@ -12,18 +38,19 @@
     transform-style: preserve-3d;
     transition: transform 0.999s;
     transform: rotateY(0deg); /* Agregado para asegurarse de que la tarjeta inicie en posición inicial */
+    
   }
 
   .card.clicked .card-inner {
     transform: rotateY(180deg);
   }
-
   .card-front,
   .card-back {
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 80%;
     backface-visibility: hidden;
+    
   }
 
   .card-front {
@@ -45,15 +72,56 @@
     align-items: center;
     /*border: 10px solid #F08A5D;*/
     border-radius: 10px;
+    object-fit: cover;
     justify-content: center;
     font-size: 24px;
     transform: rotateY(180deg);
-  }
-  img{
-    width: 700px;
-    height: 500px;
     margin: 0;
+    padding: 0;
+  }
+  #mensajeRefactorizado{
+    transform: rotateY(180deg);
+  }
+  #mensajeRefactorizado2{
+    transform: rotateY(180deg);
   }
   figure{
     margin: 0;
+    padding:0;
+  }
+  #descripcion{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    line-height: 23px;
+    color: #1e2025;
+    border: 1px dashed;
+  }
+  article{
+    width: 90%;
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    border: 1px solid ;
+  }
+  .Variable{
+    margin: 0;
+    height: 200px;
+  }
+  .card.Variable{
+    height: 300px;
+  }
+  .card.clicked .Variable{
+    height: 300px;
+  }
+  .variable {
+    width: 600px;
+    height: 300px;
+    perspective: 1000px;
+    cursor: pointer;
+
+    margin: auto;
   }
