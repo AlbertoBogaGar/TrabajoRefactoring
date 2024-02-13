@@ -117,6 +117,8 @@ main{
   .card.clicked .Variable{
     height: 300px;
   }
+
+  /*ajusto tarjeta extract variable*/
   .variable {
     width: 600px;
     height: 300px;
@@ -124,4 +126,12 @@ main{
     cursor: pointer;
 
     margin: auto;
+  }
+
+  /*Ajusto tarjeta extract class*/
+  .class{
+    width: 400px;
+    height: 400px;
+    perspective: 1000px;
+    cursor: pointer;
   }
