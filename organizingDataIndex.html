@@ -5,8 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesOther.css">
     <title>Técnica de Organizing Data</title>
+    <script>
+        function toggleCard(card) {
+            card.classList.toggle('clicked');
+            document.getElementById('mensaje').style.display = card.classList.contains('clicked') ? 'none' : 'block';
+            document.getElementById('mensaje2').style.display = card.classList.contains('clicked') ? 'none' : 'block';
+            document.getElementById('mensajeRefactorizado').style.display = card.classList.contains('clicked') ? 'block' : 'none';
+            document.getElementById('mensajeRefactorizado2').style.display = card.classList.contains('clicked') ? 'block' : 'none';
+        }
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('mensajeRefactorizado').style.display = 'none';
+            document.getElementById('mensajeRefactorizado2').style.display = 'none';
+        });
+    </script>
 </head>
 <body>
-    
+    <main>
+        <header>
+            <h1>Organizing Data</h1>
+        </header>
+        <article>
+            <section id="codigo">
+                <p>Pulsa sobre el código para refactorizarlo</p>
+                <div class="card" onclick="toggleCard(this)">
+                    <div class="card-inner">
+                        <p id="mensaje">Código sin refactorizar</p>
+                        <p id="mensajeRefactorizado">Código refactorizado</p>
+                        <figure class="card-front" id="mensaje">
+                            <img src="./imagenesCodeSmell/extractMethodSmell1.png" alt="extract method smell" width= "700px" height="500px">
+                        </figure>
+                        <figure class="card-back" id="mensajeRefactorizado">
+                            <img src="./imagenesRefactor/extractMethodRefactor1.png" alt="extract method refactor" width="700px" height="500px">
+                        </figure>
+                    </div>
+                </div>
+            </section>
+    </main>
 </body>
 </html>

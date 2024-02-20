@@ -1,24 +1,29 @@
 header{
-    border: 1px solid tomato;
     text-align: center;
+    margin-top: 2.5em;
+    font-size: large;
 }
 body{
-    background-color: black;
+    background: linear-gradient(50deg, #080808,#3a3a3a,#667579,#9fa4a3);
+    animation: fondo 3s ease infinite;
     color: white;
+    font-family: Arial, Helvetica, sans-serif;
 }
-#composing{
-    border: 1px solid black;
-    width: 10em;
-    text-align: center;
-}
-#composing:hover{
-    background-color: #9ca3af;
+@keyframes fondo{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 0% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
 }
 main{
     width: 80%;
     margin: auto;
     margin-top: 3em;
-    border: 1px solid green;
     text-align: center;
 
 }
@@ -30,7 +35,7 @@ nav div{
     margin-bottom: 3em;
     display: flex;
     flex-wrap: wrap;
-    width: 17em;
+    width: 22em;
     height: 9em;
     justify-content: center;
     align-items: center;
@@ -41,6 +46,8 @@ nav div{
     border-radius: 15px;
     overflow: hidden;
     backdrop-filter: blur(4px);
+    font-weight: bold;
+    font-size: 20px;
 
 }
 nav div:hover{
