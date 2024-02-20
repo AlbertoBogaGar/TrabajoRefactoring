@@ -22,9 +22,7 @@ main{
   justify-content: center;
   margin-top: 1em;
 }
-article{
-  box-shadow: 8px 6px 12px 12px #00000035;
-}
+
 
 /*Primera tarjeta*/
 .card {
@@ -111,6 +109,7 @@ article{
     margin: auto;
     border: 1px solid ;
     margin-bottom: 3em;
+    box-shadow: 8px 6px 12px 12px #00000035;
   }
   .Variable{
     margin: 0;
@@ -144,10 +143,22 @@ article{
 
   .move{
     width: 600px;
-    height: 600px;
+    height: 500px;
     perspective: 1000px;
     cursor: pointer;
   }
   h1{
     font-size: xx-large;
+  }
+  .decompose{
+    width: 900px;
+    height: 600px;
+    perspective: 1000px;
+    cursor: pointer;
+  }
+  .duplicate{
+    width: 900px;
+    height: 600px;
+    perspective: 1000px;
+    cursor: pointer;
   }
