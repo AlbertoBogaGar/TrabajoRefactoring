@@ -5,20 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesOther.css">
+    <title>Composing Methods</title>
     <script>
         function toggleCard(card) {
             card.classList.toggle('clicked');
             document.getElementById('mensaje').style.display = card.classList.contains('clicked') ? 'none' : 'block';
             document.getElementById('mensaje2').style.display = card.classList.contains('clicked') ? 'none' : 'block';
             document.getElementById('mensajeRefactorizado').style.display = card.classList.contains('clicked') ? 'block' : 'none';
-            document.getElementById('mensajeRefactorizado3').style.display = card.classList.contains('clicked') ? 'block' : 'none';
+            document.getElementById('mensajeRefactorizado2').style.display = card.classList.contains('clicked') ? 'block' : 'none';
         }
         document.addEventListener('DOMContentLoaded', function () {
             document.getElementById('mensajeRefactorizado').style.display = 'none';
-            document.getElementById('mensajeRefactorizado3').style.display = 'none';
+            document.getElementById('mensajeRefactorizado2').style.display = 'none';
         });
     </script>
-    <title>Composing Methods</title>
 </head>
 
 <body>
@@ -67,15 +67,15 @@
                 <p id="mensajeRefactor">Pulsa sobre el código para refactorizarlo</p>
                 <div class=" card extract2" onclick="toggleCard(this)">
                     <div class="card-inner">
-                        <p id="mensaje2 ">Código sin refactorizar</p>
-                        <p id="mensajeRefactorizado3">Código refactorizado</p>
+                        <p id="mensaje2">Código sin refactorizar</p>
+                        <p id="mensajeRefactorizado2">Código refactorizado</p>
                         <figure class="card-front" id="mensaje2">
-                            <img src="./imagenesCodeSmell/extractVariableSmell.png" alt="extract method smell"
-                                width="700px" height="400px">
+                            <img src="./imagenesCodeSmell/extractVariableSmell2.png" alt="extract method smell"
+                                width="700px" height="300px">
                         </figure>
-                        <figure class=" card-back" id="mensajeRefactorizado3">
+                        <figure class=" card-back" id="mensajeRefactorizado2">
                             <img src="./imagenesRefactor/extractVariableRefactor.png" alt="extract method refactor"
-                                width="700px" height="400px">
+                                width="700px" height="300px">
                         </figure>
                     </div>
                 </div>
