@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 body{
-  background-color: #d0cdc9;
+  background-color: #e5e0d8;
   font-family: Arial, Helvetica, sans-serif;
 }
 span{
@@ -100,6 +100,9 @@ main{
     line-height: 23px;
     color: #1e2025;
     border: 1px dashed;
+    margin-bottom: 3em;
+    background: #253343;
+    color: #d8d6d0;
   }
   article{
     width: 90%;
@@ -110,32 +113,12 @@ main{
     border: 1px solid ;
     margin-bottom: 3em;
     box-shadow: 8px 6px 12px 12px #00000035;
-  }
-  .Variable{
-    margin: 0;
-    height: 200px;
-  }
-  .card.Variable{
-    height: 300px;
-  }
-  .card.clicked .Variable{
-    height: 300px;
+    background-color: #f0dfd7;
   }
 
-  /*ajusto tarjeta extract variable*/
-  .variable {
-    width: 600px;
-    height: 300px;
-    perspective: 1000px;
-    cursor: pointer;
-
-    margin: auto;
-  }
-
-  /*Ajusto tarjeta extract class*/
   .class{
     width: 400px;
-    height: 400px;
+    height: 500px;
     perspective: 1000px;
     cursor: pointer;
   }
@@ -143,7 +126,7 @@ main{
 
   .move{
     width: 600px;
-    height: 500px;
+    height: 650px;
     perspective: 1000px;
     cursor: pointer;
   }
@@ -162,3 +145,40 @@ main{
     perspective: 1000px;
     cursor: pointer;
   }
+  .dealing{
+    width: 650px;
+    height: 750px;
+    perspective: 1000px;
+    cursor: pointer;
+  }
+  .replace{
+    width: 650px;
+    height: 600px;
+    perspective: 1000px;
+    cursor: pointer;
+  }
+  .extract{
+    width: 600px;
+    height: 800px;
+    perspective: 1000px;
+    cursor: pointer;
+  }
+  .extract2{
+    width: 700px;
+    height: 500px;
+    perspective: 1000px;
+    cursor: pointer;
+  }
+
+  #mensajeRefactor{
+    background-color: #3b533e;
+    padding: 1rem;
+    width: 20rem;
+    margin: auto;
+    color: #d8d6d0;
+  }
+
+  #mensajeColor{
+    background-color: #9fb3a2;
+  }
+

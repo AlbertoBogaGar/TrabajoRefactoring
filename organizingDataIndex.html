@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,27 +20,72 @@
         });
     </script>
 </head>
+
 <body>
     <main>
-        <header>
-            <h1>Organizing Data</h1>
-        </header>
         <article>
+            <header>
+                <h1>Replace Data Value with Object</h1>
+            </header>
             <section id="codigo">
-                <p>Pulsa sobre el código para refactorizarlo</p>
-                <div class="card" onclick="toggleCard(this)">
+                <p id="mensajeRefactor">Pulsa sobre el código para refactorizarlo</p>
+                <div class="replace card" onclick="toggleCard(this)">
                     <div class="card-inner">
                         <p id="mensaje">Código sin refactorizar</p>
                         <p id="mensajeRefactorizado">Código refactorizado</p>
                         <figure class="card-front" id="mensaje">
-                            <img src="./imagenesCodeSmell/extractMethodSmell1.png" alt="extract method smell" width= "700px" height="500px">
+                            <img src="./imagenesCodeSmell/replaceDataSmell.png" alt="extract method smell" width="600px"
+                                height="400px">
                         </figure>
                         <figure class="card-back" id="mensajeRefactorizado">
-                            <img src="./imagenesRefactor/extractMethodRefactor1.png" alt="extract method refactor" width="700px" height="500px">
+                            <img src="./imagenesRefactor/replaceDataRefactor.png" alt="extract method refactor"
+                                width="700px" height="500px">
                         </figure>
                     </div>
                 </div>
             </section>
+            <section id="descripcion">
+                <p>En este fragmento de códdigo podemos observar como tenemos una clase en la que un atributo claramente
+                    puede ser otra clase, ya que rapidamente nos damos
+                    cuenta que un paciente no solo es un <span>String</span> sino que puede tener muchos más atributos.
+                    Creando la clase <span>Paciente</span>
+                    podremos guardar muchos más atributos para poder usarlos en nuestro programa. Ahora la clase
+                    <span>Habitacion</span> puede acceder a todos
+                    los atributos de la clase <span>Paciente</span> ya que se produce una agregación.
+
+                </p>
+            </section>
+        </article>
+        <article>
+            <header>
+                <h1>Self Encapsulate Field</h1>
+            </header>
+            <section id="codigo">
+                <p id="mensajeRefactor">Pulsa sobre el código para refactorizarlo</p>
+                <div class="replace card" onclick="toggleCard(this)">
+                    <div class="card-inner">
+                        <p id="mensaje2">Código sin refactorizar</p>
+                        <p id="mensajeRefactorizado2">Código refactorizado</p>
+                        <figure class="card-front" id="mensaje2">
+                            <img src="./imagenesCodeSmell/selEncapsulateSmell.png" alt="extract method smell"
+                                width="600px" height="400px">
+                        </figure>
+                        <figure class="card-back" id="mensajeRefactorizado2">
+                            <img src="./imagenesRefactor/selfEncapsulateRefactor.png" alt="extract method refactor"
+                                width="600px" height="500px">
+                        </figure>
+                    </div>
+                </div>
+            </section>
+            <section id="descripcion">
+                <p>En este caso tenemos una calse con un atributo al que podemos acceder facilmente ya que no hay ningun control sobre él.
+                    Aplicar esta técnica nos ayuda a tener un mayor control sobre ese atributo, ahora podremos incluir validaciones e incluso controlar quién 
+                    puede acceder a ese campo.
+                </p>
+            </section>
+
+        </article>
     </main>
 </body>
+
 </html>
