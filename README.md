@@ -1,6 +1,6 @@
 # TrabajoRefactoring
 
-### Enlace a página: https://albertobogagar.github.io/TrabajoRefactoring/
+
 
 ## Trabajo realizado por: Alberto Boga
 Para este trabajo he utilizado código creado por mi mismo. 
