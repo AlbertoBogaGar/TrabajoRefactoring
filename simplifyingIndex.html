@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylesOther.css">
+    <link rel="stylesheet" href="./stylesOther.css">
     <title>Técnica de Simplifying Conditional Expressions</title>
     <script>
         function toggleCard(card) {
@@ -19,6 +20,7 @@
         });
     </script>
 </head>
+
 <body>
     <main>
         <article>
@@ -26,27 +28,31 @@
                 <header>
                     <h1>Decompose Conditional</h1>
                 </header>
-                
+
                 <p id="mensajeRefactor">Pulsa sobre el código para refactorizarlo</p>
                 <div class=" decompose card" onclick="toggleCard(this)">
                     <div class="card-inner">
                         <p id="mensaje">Código sin refactorizar</p>
                         <p id="mensajeRefactorizado">Código refactorizado</p>
                         <figure class="card-front" id="mensaje">
-                            <img src="./imagenesCodeSmell/descomposeConditionalSmell.png" alt="extract method smell" width= "700px" height="400px">
+                            <img src="./imagenesCodeSmell/descomposeConditionalSmell.png" alt="extract method smell"
+                                width="700px" height="400px">
                         </figure>
                         <figure class="card-back" id="mensajeRefactorizado">
-                            <img src="./imagenesRefactor/descomposeConditionalRefactor.png" alt="extract method refactor" width="700px" height="400px">
+                            <img src="./imagenesRefactor/descomposeConditionalRefactor.png"
+                                alt="extract method refactor" width="700px" height="400px">
                         </figure>
                     </div>
                 </div>
             </section>
             <section id="descripcion">
-                <p>
-                    En este fragmento de código podemos ver que la condición del if puede llegar a ser compleja. Si queremos volver a usar esa condición a lo largo de nuestro código 
-                    vamos a tener que repetir toda esa linea. Con esta técnica conseguimos que nuestro código sea mucho más legible y optimo, ahora podremos 
-                    usar esa condición de una manera más sencilla.
+                <p>En este fragmento de código, podemos observar que la condición del "if" puede llegar a ser compleja.
+                    Si deseamos volver a utilizar esa condición a lo largo de nuestro código,
+                    tendremos que repetir toda esa línea. Con esta técnica, logramos que nuestro código sea mucho más
+                    legible y eficiente; ahora podemos
+                    emplear esa condición de una manera más sencilla.
                 </p>
+
             </section>
         </article>
         <article>
@@ -54,29 +60,34 @@
                 <header>
                     <h1>Consolidate Duplicate Conditional Fragments</h1>
                 </header>
-                
+
                 <p id="mensajeRefactor">Pulsa sobre el código para refactorizarlo</p>
                 <div class=" duplicate card" onclick="toggleCard(this)">
                     <div class="card-inner">
                         <p id="mensaje2">Código sin refactorizar</p>
                         <p id="mensajeRefactorizado2">Código refactorizado</p>
                         <figure class="card-front" id="mensaje2">
-                            <img src="./imagenesCodeSmell/duplicateConditionalSmell.png" alt="extract method smell" width= "700px" height="400px">
+                            <img src="./imagenesCodeSmell/duplicateConditionalSmell.png" alt="extract method smell"
+                                width="700px" height="400px">
                         </figure>
                         <figure class="card-back" id="mensajeRefactorizado2">
-                            <img src="./imagenesRefactor/duplicateConditionalRefactor.png" alt="extract method refactor" width="700px" height="400px">
+                            <img src="./imagenesRefactor/duplicateConditionalRefactor.png" alt="extract method refactor"
+                                width="700px" height="400px">
                         </figure>
                     </div>
                 </div>
             </section>
             <section id="descripcion">
-                <p>
-                    En este caso podemos obsevar como tenemos un <span>if else</span> el cual contiene una linea de código que pase lo que pase 
-                    va a ejecutarse. Con esta técnia o que logramos es extraer esa línea de códgi oque si o si va a ejecutarse y sacarlafuera del 
-                    <span>if else.</span>
+                <p>En este caso, podemos observar cómo tenemos un <span>if-else</span>, el cual contiene una línea de
+                    código que, pase lo que pase,
+                    se ejecutará. Con esta técnica, logramos extraer esa línea de código que siempre se ejecutará y
+                    colocarla fuera del
+                    <span>if-else.</span>
                 </p>
+
             </section>
         </article>
     </main>
 </body>
+
 </html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/stylesOther.css">
+    <title>Técnica de Dealing with Generalization</title>
+    <script>
+        function toggleCard(card) {
+            card.classList.toggle('clicked');
+            document.getElementById('mensaje').style.display = card.classList.contains('clicked') ? 'none' : 'block';
+            document.getElementById('mensaje2').style.display = card.classList.contains('clicked') ? 'none' : 'block';
+            document.getElementById('mensajeRefactorizado').style.display = card.classList.contains('clicked') ? 'block' : 'none';
+            document.getElementById('mensajeRefactorizado2').style.display = card.classList.contains('clicked') ? 'block' : 'none';
+        }
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('mensajeRefactorizado').style.display = 'none';
+            document.getElementById('mensajeRefactorizado2').style.display = 'none';
+        });
+    </script>
+</head>
+
+<body>
+    <main>
+        <article>
+            <header>
+                <h1>Pull UP Field</h1>
+            </header>
+            <section id="codigo">
+                <p id="mensajeRefactor">Pulsa sobre el código para refactorizarlo</p>
+                <div class="dealing card" onclick="toggleCard(this)">
+                    <div class="card-inner">
+                        <p id="mensaje">Código sin refactorizar</p>
+                        <p id="mensajeRefactorizado">Código refactorizado</p>
+                        <figure class="card-front" id="mensaje">
+                            <img src="./imagenesCodeSmell/pullUpSmell.png" alt="extract method smell" width="600px"
+                                height="600px">
+                        </figure>
+                        <figure class="card-back" id="mensajeRefactorizado">
+                            <img src="./imagenesRefactor/pullUpRefactor.png" alt="extract method refactor" width="600px"
+                                height="600px">
+                        </figure>
+                    </div>
+                </div>
+            </section>
+            <section id="descripcion">
+                <p>En este fragmento de código, encontramos una estructura de herencia en la que la clase
+                    <span>Personal</span>
+                    tiene dos subclases. Ambas subclases comparten un método común, ya que representan al personal de un
+                    hospital.
+                    Para mejorar la lógica y permitir que el personal pueda registrar su entrada y salida del trabajo,
+                    podemos
+                    optimizar el código elevando el método común de las subclases a la clase padre,
+                    <span>Personal.</span>
+                    Ahora, si creamos otra subclase como podría ser <span>Médico,</span> simplemente necesitamos
+                    declarar que
+                    extiende de la clase <span>Personal,</span> y automáticamente podremos utilizar el método
+                    <span>fichar.</span>
+                </p>
+
+            </section>
+        </article>
+        <article>
+            <header>
+                <h1>Push Down Method</h1>
+            </header>
+            <section id="codigo">
+                <p id="mensajeRefactor">Pulsa sobre el código para refactorizarlo</p>
+                <div class="dealing card" onclick="toggleCard(this)">
+                    <div class="card-inner">
+                        <p id="mensaje2">Código sin refactorizar</p>
+                        <p id="mensajeRefactorizado2">Código refactorizado</p>
+                        <figure class="card-front" id="mensaje2">
+                            <img src="./imagenesCodeSmell/pushDownSmell.png" alt="extract method smell" width="600px"
+                                height="500px">
+                        </figure>
+                        <figure class="card-back" id="mensajeRefactorizado2">
+                            <img src="./imagenesRefactor/pushDownRefactor.png" alt="extract method refactor"
+                                width="600px" height="600px">
+                        </figure>
+                    </div>
+                </div>
+            </section>
+            <section id="descripcion">
+                <p>En este caso, nos encontramos con que inicialmente tenemos en la clase <span>Personal</span> un
+                    método
+                    que, a primera vista, podría ser heredado por todas sus subclases. Sin embargo, en realidad, solo
+                    una clase,
+                    en este caso, los enfermeros, llevará a cabo la acción de <span>firmarMedicacionAdministrada</span>.
+                    El uso de esta técnica nos ayuda a que nuestro código sea más claro y lógico, evitando confusiones.
+                    Ahora, si alguien examina nuestro código, comprenderá de inmediato que solo los enfermeros pueden
+                    realizar esa acción.
+                </p>
+
+            </section>
+        </article>
+
+    </main>
+</body>
+
+</html>

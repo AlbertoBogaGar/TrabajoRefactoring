@@ -1,0 +1,60 @@
+header{
+    text-align: center;
+    margin-top: 2.5em;
+    font-size: large;
+}
+body{
+    background: linear-gradient(50deg, #0f1a1e,#192f28,#3e5646,#887a57);
+    animation: fondo 10s ease infinite;
+    background-size: 300% 100%;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+@keyframes fondo{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+main{
+    width: 80%;
+    margin: auto;
+    margin-top: 3em;
+    text-align: center;
+
+}
+nav{
+    display: grid;
+    justify-content: center;
+}
+nav div{
+    margin-bottom: 3em;
+    display: flex;
+    flex-wrap: wrap;
+    width: 22em;
+    height: 9em;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid #FFFFFF75;
+    border: 2px solid #FFFFFF75;
+    box-shadow: 5px 5px 12px #00000035;
+    background: #FFFFFF25;
+    border-radius: 15px;
+    overflow: hidden;
+    backdrop-filter: blur(4px);
+    font-weight: bold;
+    font-size: 20px;
+
+}
+nav div:hover{
+    background-color: #ffffff47;
+}
+a{
+    color: white;
+    text-decoration: none;
+}

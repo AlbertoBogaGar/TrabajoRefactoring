@@ -1,0 +1,184 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  background-color: #667579;
+  font-family: Arial, Helvetica, sans-serif;
+}
+span{
+  font-style: italic;
+}
+header{
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  margin-top: 1em;
+  color:#4c5b6c;
+}
+main{
+  width: 100%;
+  margin: auto;
+  display: grid;
+  justify-content: center;
+  margin-top: 1em;
+}
+
+
+/*Primera tarjeta*/
+.card {
+    width: 600px;
+    height: 600px;
+    perspective: 1000px;
+    cursor: pointer;
+    margin: auto;
+  }
+
+  .card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.999s;
+    transform: rotateY(0deg); /* Agregado para asegurarse de que la tarjeta inicie en posición inicial */
+    
+  }
+
+  .card.clicked .card-inner {
+    transform: rotateY(180deg);
+  }
+  .card-front,
+  .card-back {
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    backface-visibility: hidden;
+    
+  }
+
+  .card-front {
+    /*background-color: #6A2C70;*/
+    color: #fff;
+    display: flex;
+    align-items: center;
+    /*border: 10px solid #6A2C70;*/
+    border-radius: 10px;
+    justify-content: center;
+    font-size: 24px;
+    transform: rotateY(0deg);
+  }
+
+  .card-back {
+    /*background-color: #F08A5D;*/
+    color: #fff;
+    display: flex;
+    align-items: center;
+    /*border: 10px solid #F08A5D;*/
+    border-radius: 10px;
+    object-fit: cover;
+    justify-content: center;
+    font-size: 24px;
+    transform: rotateY(180deg);
+    margin: 0;
+    padding: 0;
+  }
+  #mensajeRefactorizado{
+    transform: rotateY(180deg);
+  }
+  #mensajeRefactorizado2{
+    transform: rotateY(180deg);
+  }
+  figure{
+    margin: 0;
+    padding:0;
+  }
+  #descripcion{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px;
+    line-height: 23px;
+    color: #1e2025;
+    border: 1px dashed;
+    margin-bottom: 3em;
+    background: #253343;
+    color: #d8d6d0;
+  }
+  article{
+    width: 90%;
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    border: 1px solid ;
+    margin-bottom: 3em;
+    box-shadow: 8px 6px 12px 12px #00000035;
+    background-color: #9fa4a3;
+  }
+
+  .class{
+    width: 400px;
+    height: 500px;
+    perspective: 1000px;
+    cursor: pointer;
+  }
+
+
+  .move{
+    width: 600px;
+    height: 650px;
+    perspective: 1000px;
+    cursor: pointer;
+  }
+  h1{
+    font-size: xx-large;
+  }
+  .decompose{
+    width: 900px;
+    height: 500px;
+    perspective: 1000px;
+    cursor: pointer;
+  }
+  .duplicate{
+    width: 900px;
+    height: 600px;
+    perspective: 1000px;
+    cursor: pointer;
+  }
+  .dealing{
+    width: 650px;
+    height: 750px;
+    perspective: 1000px;
+    cursor: pointer;
+  }
+  .replace{
+    width: 650px;
+    height: 600px;
+    perspective: 1000px;
+    cursor: pointer;
+  }
+  .extract{
+    width: 600px;
+    height: 800px;
+    perspective: 1000px;
+    cursor: pointer;
+  }
+  .extract2{
+    width: 600px;
+    height: 400px;
+    perspective: 1000px;
+    cursor: pointer;
+  }
+
+  #mensajeRefactor{
+    background-color: #3b533e;
+    padding: 1rem;
+    width: 20rem;
+    margin: auto;
+    color: #d8d6d0;
+  }
+
+  #mensajeColor{
+    background-color: #9fb3a2;
+  }
+
