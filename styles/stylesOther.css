@@ -103,6 +103,7 @@ main{
     margin-bottom: 3em;
     background: #253343;
     color: #d8d6d0;
+    line-height:1.8em ;
   }
   article{
     width: 90%;
@@ -131,7 +132,8 @@ main{
     cursor: pointer;
   }
   h1{
-    font-size: xx-large;
+    font-size:35pt;
+    text-decoration: underline;
   }
   .decompose{
     width: 900px;
